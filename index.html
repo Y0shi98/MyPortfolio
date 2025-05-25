@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoshiki Okitsu Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Yoshiki Okitsu Portfolio</h1>
+    <p>Graphic Design & 2D Art</p>
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ja')">日本語</button>
+      <a href="https://www.instagram.com/y0shi98?igsh=MTVvdjMxcTJidGtrZg" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="gallery">
+    <div class="art-card">
+      <img src="https://drive.google.com/thumbnail?id=1yfeQUj5cBTo_UHILfuLHlWyUNl4VAVBl" alt="Laundry Day">
+      <h2>Laundry Day</h2>
+      <p>A cheerful illustration capturing the satisfaction of tidying up and organizing a cozy wardrobe.</p>
+    </div>
+    <div class="art-card">
+      <img src="https://drive.google.com/thumbnail?id=1LuLV1JuK7ExZe-Mbc4neAwAaWafivNlN" alt="Best Friends">
+      <h2>Best Friends</h2>
+      <p>A heartwarming moment between a girl and her puppy, emphasizing companionship and love.</p>
+    </div>
+    <div class="art-card">
+      <img src="https://drive.google.com/thumbnail?id=1hyl_4aDKea8QU0JPPLxMXRsDbaezULhD" alt="Adventure Imagination">
+      <h2>Adventure Imagination</h2>
+      <p>A playful depiction of a child and her dog preparing for imaginative adventures in their living room kingdom.</p>
+    </div>
+    <div class="art-card">
+      <img src="https://drive.google.com/thumbnail?id=1Jde4u1zPNJf38td_aj8WSIqHs0sxrytq" alt="William Morris Exhibition">
+      <h2>William Morris Exhibition</h2>
+      <p>Main visuals and character visuals for an event showcasing famous artists like William Morris. These were displayed at the venue.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Yoshiki Okitsu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      // 簡易的な言語切り替え（詳細には i18n ライブラリ推奨）
+      alert(lang === 'ja' ? '日本語表示は開発中です。' : 'Switched to English.');
+    }
+  </script>
+</body>
+</html>
