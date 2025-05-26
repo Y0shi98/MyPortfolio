@@ -1,77 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoshiki Okitsu Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script>
-    function switchLang(lang) {
-      const items = document.querySelectorAll('[data-en], [data-ja]');
-      items.forEach(item => {
-        item.textContent = lang === 'ja' ? item.getAttribute('data-ja') : item.getAttribute('data-en');
-      });
-    }
-  </script>
-</head>
-<body>
-  <div class="header">
-    <h1 data-en="Portfolio" data-ja="ポートフォリオ">Portfolio</h1>
-    <p data-en="My name is Yoshiki Okitsu. I specialize in graphic design and 2D art. Welcome to my creative space!" data-ja="私の名前はYoshiki Okitsuです。グラフィックデザインと2Dアートを専門としています。私の創作スペースへようこそ！">
-      My name is Yoshiki Okitsu. I specialize in graphic design and 2D art. Welcome to my creative space!
-    </p>
-    <div class="lang-switch">
-      <button onclick="switchLang('en')">English</button>
-      <button onclick="switchLang('ja')">日本語</button>
-      <a href="https://www.instagram.com/y0shi98?igsh=MTVvdjMxcTJidGtrZg%3D%3D&utm_source=qr" target="_blank">📷</a>
-    </div>
-  </div>
-
-  <div class="gallery">
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1yfeQUj5cBTo_UHILfuLHlWyUNl4VAVBl" alt="Laundry Day">
-      <h2 data-en="Laundry Day" data-ja="洗濯の日">Laundry Day</h2>
-      <p data-en="A cheerful illustration capturing the satisfaction of tidying up and organizing a cozy wardrobe." data-ja="心地よいワードローブを整える満足感を描いた明るいイラスト。">A cheerful illustration capturing the satisfaction...</p>
-    </div>
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1LuLV1JuK7ExZe-Mbc4neAwAaWafivNlN" alt="Best Friends">
-      <h2 data-en="Best Friends" data-ja="親友">Best Friends</h2>
-      <p data-en="A heartwarming moment between a girl and her puppy, emphasizing companionship and love." data-ja="少女と子犬の心温まる瞬間。友情と愛情を表現。">A heartwarming moment...</p>
-    </div>
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1hyl_4aDKea8QU0JPPLxMXRsDbaezULhD" alt="Adventure Imagination">
-      <h2 data-en="Adventure Imagination" data-ja="冒険の想像">Adventure Imagination</h2>
-      <p data-en="A playful depiction of a child and her dog preparing for imaginative adventures in their living room kingdom." data-ja="子どもと犬がリビングルームを王国に見立てて冒険に出かける様子を描く。">A playful depiction...</p>
-    </div>
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1H4GO4wZjE9RZLrfsdODhPLo7d6uKxiO7" alt="Artwork">
-      <h2 data-en="Cozy Moment" data-ja="ほっこりの瞬間">Cozy Moment</h2>
-      <p data-en="Capturing a relaxing, peaceful vibe." data-ja="くつろいだ平和な雰囲気を表現。">Capturing a relaxing...</p>
-    </div>
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1nXSGPqu11du1MHyO39z1BzxrHgS_YeDf" alt="Additional Art">
-      <h2 data-en="Quiet Afternoon" data-ja="穏やかな午後">Quiet Afternoon</h2>
-      <p data-en="A scene of peaceful time at home." data-ja="自宅での穏やかな時間のシーン。">A scene of peaceful time...</p>
-    </div>
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1XciYXKtmZ7WN0S1PU_d-1DRpRpMKclrL" alt="Soft Colors">
-      <h2 data-en="Soft Colors" data-ja="柔らかな色合い">Soft Colors</h2>
-      <p data-en="Gentle tones and soft expression." data-ja="優しいトーンと柔らかな表現。">Gentle tones...</p>
-    </div>
-  </div>
-
-  <div class="gallery">
-    <div class="art-card">
-      <img src="https://drive.google.com/thumbnail?id=1Jde4u1zPNJf38td_aj8WSIqHs0sxrytq" alt="William Morris Event">
-      <h2 data-en="William Morris Event Visuals" data-ja="ウィリアムモリス展 ビジュアル">William Morris Event Visuals</h2>
-      <p data-en="Main visuals and artist-themed designs for the 'William Morris Exhibition', displayed in the actual store area." data-ja="ウィリアムモリスを始めとした様々な有名アーティストのグッズを販売する「ウィリアムモリス展」というイベントのメインビジュアルと各アーティストをイメージしたビジュアルを担当しました。これらは売場にて実際に飾られて使用されました。">
-        Main visuals and artist-themed designs...
-      </p>
-    </div>
-  </div>
-
-  <div class="footer">
-    © 2025 Yoshiki Okitsu. <span data-en="All rights reserved." data-ja="全著作権所有。">All rights reserved.</span>
-  </div>
-</body>
-</html>
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #ffe4e6, #e0d4f7);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header {
+  text-align: center;
+  padding: 2rem;
+}
+header h1 {
+  font-size: 3rem;
+}
+.lang-buttons {
+  margin: 1rem;
+}
+.lang-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.instagram-icon {
+  font-size: 2rem;
+  color: #e1306c;
+  margin-top: 1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.card .content {
+  padding: 1rem;
+}
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.special-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+.special-section img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
