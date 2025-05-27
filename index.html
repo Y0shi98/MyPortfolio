@@ -2,89 +2,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yoshiki Okitsu Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
   <header>
     <h1 data-en="Portfolio" data-ja="ポートフォリオ">Portfolio</h1>
-    <p data-en="My name is Yoshiki Okitsu. I specialize in graphic design and 2D art."
-       data-ja="私の名前はYoshiki Okitsuです。グラフィックデザインと2Dアートを専門としています。">
-       My name is Yoshiki Okitsu. I specialize in graphic design and 2D art.
+    <p data-en="Hello! My name is Yoshiki. I specialize in graphic design and 2D art." data-ja="沖津慶来と申します。グラフィックデザインと2Dアートを専門としています。">
+      I specialize in graphic design and 2D art.
     </p>
-
-    <div class="controls">
+    <div class="lang-buttons">
       <button onclick="setLanguage('en')">English</button>
       <button onclick="setLanguage('ja')">日本語</button>
-      <a href="https://www.instagram.com/y0shi98" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram" class="icon">
+      <a href="https://www.instagram.com/y0shi98" target="_blank" class="instagram-link">
+        <i class="fab fa-instagram"></i>
       </a>
     </div>
   </header>
 
   <main class="grid-container">
-    <div class="card" onclick="openModal('https://imgur.com/qMOIdgp.jpg')">
-      <img src="https://imgur.com/qMOIdgp.jpg" alt="art1">
-      <div class="text" data-en="Laundry Day" data-ja="洗濯の日">Laundry Day</div>
+    <!-- Artworks -->
+    <div class="art-card">
+      <img src="https://imgur.com/qMOIdgp.jpg" alt="Laundry Day" onclick="openModal(this.src)" />
+      <h2 data-en="Laundry Day" data-ja="洗濯の日">Laundry Day</h2>
+      
     </div>
-    <div class="card" onclick="openModal('https://imgur.com/aM2QLaC.jpg')">
-      <img src="https://imgur.com/aM2QLaC.jpg" alt="art2">
-      <div class="text" data-en="Best Friends" data-ja="親友">Best Friends</div>
+    <div class="art-card">
+      <img src="https://imgur.com/aM2QLaC.jpg" alt="Best Friends" onclick="openModal(this.src)" />
+      <h2 data-en="Best Friends" data-ja="親友">Best Friends</h2>
+      
     </div>
-    <div class="card" onclick="openModal('https://imgur.com/Kkvw9Nv.jpg')">
-      <img src="https://imgur.com/Kkvw9Nv.jpg" alt="art3">
-      <div class="text" data-en="Adventure Imagination" data-ja="冒険の想像">Adventure Imagination</div>
+    <div class="art-card">
+      <img src="https://imgur.com/Kkvw9Nv.jpg" alt="Adventure Imagination" onclick="openModal(this.src)" />
+      <h2 data-en="Adventure Imagination" data-ja="冒険の想像">Adventure Imagination</h2>
+      
     </div>
-    <div class="card" onclick="openModal('https://imgur.com/Pu52vSv.jpg')">
-      <img src="https://imgur.com/Pu52vSv.jpg" alt="art4">
-      <div class="text" data-en="City Dreaming" data-ja="都会の夢">City Dreaming</div>
+    <div class="art-card">
+      <img src="https://imgur.com/Pu52vSv.jpg" alt="Joyful Dialy" onclick="openModal(this.src)" />
+      <h2 data-en="Joyful Dialy" data-ja="日記">Joyful Dialy</h2>
+  
     </div>
-    <div class="card" onclick="openModal('https://imgur.com/DQxtBPY.jpg')">
-      <img src="https://imgur.com/DQxtBPY.jpg" alt="art5">
-      <div class="text" data-en="Nature Walk" data-ja="自然散歩">Nature Walk</div>
+    <div class="art-card">
+      <img src="https://imgur.com/DQxtBPY.jpg" alt="Artist in Desert" onclick="openModal(this.src)" />
+      <h2 data-en="Artist in Desert" data-ja="砂漠の音楽家">Artist in Desert</h2>
+      
     </div>
-    <div class="card" onclick="openModal('https://imgur.com/XuL778H.jpg')">
-      <img src="https://imgur.com/XuL778H.jpg" alt="art6">
-      <div class="text" data-en="Peaceful Afternoon" data-ja="穏やかな午後">Peaceful Afternoon</div>
-    </div>
-    <div class="card" onclick="openModal('https://imgur.com/4610n9I.jpg')">
-      <img src="https://imgur.com/4610n9I.jpg" alt="William Morris">
-      <div class="text" data-en="Main visual for 'William Morris Exhibition' and artist visuals used in-store."
-           data-ja="ウィリアムモリス展のメインビジュアルおよび売場で使用されたアーティストビジュアル。">
-        Main visual for 'William Morris Exhibition' and artist visuals used in-store.
-      </div>
-    </div>
+    <div class="art-card">
+      <img src="https://imgur.com/XuL778H.jpg" alt="Dinner" onclick="openModal(this.src)" />
+      <h2 data-en="Dinner" data-ja="夜ごはん">Dinner</h2>
+      
+   </div>
+    <!-- 他の画像も同様に続けてください... -->
   </main>
 
-  <div class="modal" id="imageModal" onclick="closeModal()">
-    <img id="modalImg" src="" alt="Full Image">
-  </div>
+  <section class="special-section">
+    <h2 data-en="William Morris Exhibition" data-ja="ウィリアムモリス展">William Morris Exhibition</h2>
+    <p data-en="Main visual and artist-themed designs used in-store." 
+       data-ja="売場で使用されたメインビジュアルとアーティストをイメージしたデザイン。">
+       Main visual and artist-themed designs used in-store.
+    </p>
+    <div class="morris-gallery">
+      <img src="https://imgur.com/4610n9I.jpg" alt="William Morris Main Visual" onclick="openModal(this.src)" />
+      <img src="https://imgur.com/kL3k3oQ.jpg" alt="Visual 1" onclick="openModal(this.src)" />
+      <img src="https://imgur.com/ezngxQd.jpg" alt="Visual 2" onclick="openModal(this.src)" />
+      <img src="https://imgur.com/Mymx0zG.jpg" alt="Visual 3" onclick="openModal(this.src)" />
+    </div>
+  </section>
 
   <footer>
-    © 2025 Yoshiki Okitsu. All rights reserved.
+    © 2025 Yoshiki Okitsu
   </footer>
+
+  <!-- Modal for image preview -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" alt="Expanded Art" />
+  </div>
 
   <script>
     function setLanguage(lang) {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = el.dataset[lang];
       });
     }
 
     function openModal(src) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImg');
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
       modalImg.src = src;
-      modal.classList.add('show');
+      modal.style.display = "flex";
     }
 
     function closeModal() {
-      document.getElementById('imageModal').classList.remove('show');
+      document.getElementById("modal").style.display = "none";
     }
   </script>
-
 </body>
 </html>
