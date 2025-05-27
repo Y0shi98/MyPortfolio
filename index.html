@@ -1,136 +1,90 @@
 <link rel="stylesheet" href="style.css" />
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yoshiki Okitsu Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header>
-    <h1 id="title">Portfolio</h1>
-    <p id="intro">
-      My name is Yoshiki Okitsu. I specialize in graphic design and 2D art. Welcome to my creative space!
+    <h1 data-en="Portfolio" data-ja="ポートフォリオ">Portfolio</h1>
+    <p data-en="My name is Yoshiki Okitsu. I specialize in graphic design and 2D art."
+       data-ja="私の名前はYoshiki Okitsuです。グラフィックデザインと2Dアートを専門としています。">
+       My name is Yoshiki Okitsu. I specialize in graphic design and 2D art.
     </p>
-    <div class="lang-buttons">
-      <button onclick="setLang('en')">English</button>
-      <button onclick="setLang('ja')">日本語</button>
+
+    <div class="controls">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ja')">日本語</button>
+      <a href="https://www.instagram.com/y0shi98" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram" class="icon">
+      </a>
     </div>
-    <a class="instagram-icon" href="https://www.instagram.com/y0shi98?igsh=MTVvdjMxcTJidGtrZg%3D%3D&utm_source=qr" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
   </header>
 
-  <section class="gallery" id="gallery"></section>
+  <main class="grid-container">
+    <div class="card" onclick="openModal('https://imgur.com/qMOIdgp.jpg')">
+      <img src="https://imgur.com/qMOIdgp.jpg" alt="art1">
+      <div class="text" data-en="Laundry Day" data-ja="洗濯の日">Laundry Day</div>
+    </div>
+    <div class="card" onclick="openModal('https://imgur.com/aM2QLaC.jpg')">
+      <img src="https://imgur.com/aM2QLaC.jpg" alt="art2">
+      <div class="text" data-en="Best Friends" data-ja="親友">Best Friends</div>
+    </div>
+    <div class="card" onclick="openModal('https://imgur.com/Kkvw9Nv.jpg')">
+      <img src="https://imgur.com/Kkvw9Nv.jpg" alt="art3">
+      <div class="text" data-en="Adventure Imagination" data-ja="冒険の想像">Adventure Imagination</div>
+    </div>
+    <div class="card" onclick="openModal('https://imgur.com/Pu52vSv.jpg')">
+      <img src="https://imgur.com/Pu52vSv.jpg" alt="art4">
+      <div class="text" data-en="City Dreaming" data-ja="都会の夢">City Dreaming</div>
+    </div>
+    <div class="card" onclick="openModal('https://imgur.com/DQxtBPY.jpg')">
+      <img src="https://imgur.com/DQxtBPY.jpg" alt="art5">
+      <div class="text" data-en="Nature Walk" data-ja="自然散歩">Nature Walk</div>
+    </div>
+    <div class="card" onclick="openModal('https://imgur.com/XuL778H.jpg')">
+      <img src="https://imgur.com/XuL778H.jpg" alt="art6">
+      <div class="text" data-en="Peaceful Afternoon" data-ja="穏やかな午後">Peaceful Afternoon</div>
+    </div>
+    <div class="card" onclick="openModal('https://imgur.com/4610n9I.jpg')">
+      <img src="https://imgur.com/4610n9I.jpg" alt="William Morris">
+      <div class="text" data-en="Main visual for 'William Morris Exhibition' and artist visuals used in-store."
+           data-ja="ウィリアムモリス展のメインビジュアルおよび売場で使用されたアーティストビジュアル。">
+        Main visual for 'William Morris Exhibition' and artist visuals used in-store.
+      </div>
+    </div>
+  </main>
 
-  <section class="special-section">
-    <img src="https://drive.google.com/thumbnail?id=1Jde4u1zPNJf38td_aj8WSIqHs0sxrytq" alt="William Morris Visual" />
-    <p id="special-desc">
-      I was in charge of the main visual and artist-themed visuals for the “William Morris Exhibition,” which sold goods by famous artists including William Morris. These visuals were displayed in the actual venue.
-    </p>
-  </section>
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <img id="modalImg" src="" alt="Full Image">
+  </div>
 
-  <footer class="footer" id="footer">
+  <footer>
     © 2025 Yoshiki Okitsu. All rights reserved.
   </footer>
 
   <script>
-    const data = [
-      {
-        title: { en: "Laundry Day", ja: "洗濯の日" },
-        desc: {
-          en: "A cheerful illustration capturing the satisfaction of tidying up and organizing a cozy wardrobe.",
-          ja: "心地よいワードローブを整える満足感を描いた明るいイラスト。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1yfeQUj5cBTo_UHILfuLHlWyUNl4VAVBl"
-      },
-      {
-        title: { en: "Best Friends", ja: "親友" },
-        desc: {
-          en: "A heartwarming moment between a girl and her puppy, emphasizing companionship and love.",
-          ja: "少女と子犬の心温まる瞬間。友情と愛情を表現。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1LuLV1JuK7ExZe-Mbc4neAwAaWafivNlN"
-      },
-      {
-        title: { en: "Adventure Imagination", ja: "冒険の想像" },
-        desc: {
-          en: "A playful depiction of a child and her dog preparing for imaginative adventures in their living room kingdom.",
-          ja: "子どもと犬がリビングルームを王国に見立てて冒険に出かける様子を描く。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1hyl_4aDKea8QU0JPPLxMXRsDbaezULhD"
-      },
-      {
-        title: { en: "Sunlight Window", ja: "陽だまりの窓辺" },
-        desc: {
-          en: "A tranquil space filled with soft sunlight and plants.",
-          ja: "やさしい日差しと植物に囲まれた穏やかな空間。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1H4GO4wZjE9RZLrfsdODhPLo7d6uKxiO7"
-      },
-      {
-        title: { en: "After the Rain", ja: "雨上がり" },
-        desc: {
-          en: "Fresh air and hope after the rain.",
-          ja: "雨上がりの新鮮な空気と希望を表現。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1nXSGPqu11du1MHyO39z1BzxrHgS_YeDf"
-      },
-      {
-        title: { en: "Quiet Time", ja: "静かな時間" },
-        desc: {
-          en: "Peaceful moments alone with a book and tea.",
-          ja: "読書とお茶で過ごす静かなひととき。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1XciYXKtmZ7WN0S1PU_d-1DRpRpMKclrL"
-      },
-      {
-        title: { en: "Graphic Collage", ja: "グラフィックコラージュ" },
-        desc: {
-          en: "Mixed techniques to express dynamic visual identity.",
-          ja: "動きのあるビジュアルアイデンティティを表現したコラージュ作品。"
-        },
-        src: "https://drive.google.com/thumbnail?id=1kW1yLUPKq6L1mBXML0_HCdNFmamCctMp"
-      }
-    ];
-
-    let currentLang = "en";
-
-    function renderGallery() {
-      const gallery = document.getElementById("gallery");
-      gallery.innerHTML = "";
-      data.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-          <img src="${item.src}" alt="${item.title[currentLang]}" onclick="window.open('${item.src}', '_blank')" />
-          <div class="content">
-            <h3>${item.title[currentLang]}</h3>
-            <p>${item.desc[currentLang]}</p>
-          </div>
-        `;
-        gallery.appendChild(card);
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
       });
     }
 
-    function setLang(lang) {
-      currentLang = lang;
-      document.getElementById("title").textContent = lang === "ja" ? "ポートフォリオ" : "Portfolio";
-      document.getElementById("intro").textContent = lang === "ja"
-        ? "私の名前はYoshiki Okitsuです。グラフィックデザインと2Dアートを専門としています。私の創作スペースへようこそ！"
-        : "My name is Yoshiki Okitsu. I specialize in graphic design and 2D art. Welcome to my creative space!";
-      document.getElementById("footer").textContent = lang === "ja"
-        ? "© 2025 Yoshiki Okitsu. 全著作権所有。"
-        : "© 2025 Yoshiki Okitsu. All rights reserved.";
-      document.getElementById("special-desc").textContent = lang === "ja"
-        ? "ウィリアムモリスを始めとした様々な有名アーティストのグッズを販売する「ウィリアムモリス展」というイベントのメインビジュアルと各アーティストをイメージしたビジュアルを担当しました。これらは売場にて実際に飾られて使用されました。"
-        : "I was in charge of the main visual and artist-themed visuals for the “William Morris Exhibition,” which sold goods by famous artists including William Morris. These visuals were displayed in the actual venue.";
-      renderGallery();
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = src;
+      modal.classList.add('show');
     }
 
-    renderGallery();
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('show');
+    }
   </script>
+
 </body>
 </html>
