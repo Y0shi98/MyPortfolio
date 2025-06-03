@@ -157,3 +157,22 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+.contact-button-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-button {
+  background-color: #ef476f;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #d43f63;
+}
