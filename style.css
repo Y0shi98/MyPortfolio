@@ -71,14 +71,14 @@ button {
   text-align: center;
 }
 
-.morris-gallery {
+.ayumuhirano {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   justify-items: center;
 }
 
-.morris-gallery img {
+.ayumuhirano img {
   width: 100%;
   max-width: 300px;
   border-radius: 1rem;
@@ -86,7 +86,7 @@ button {
   transition: transform 0.3s;
 }
 
-.morris-gallery img:hover {
+.ayumuhirano img:hover {
   transform: scale(1.03);
 }
 
